@@ -1,0 +1,1668 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#15161a">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="ปิดยอด">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAYAAAA9zQYyAAADxklEQVR4nO3dzVHjUBCFUTE1KcCCMJwX0ZCXU2JWDAODsX6e3mtdnbOkisKoP7pkYdkPj0/PbxOE+DX6AUBLgiaKoIkiaKIImiiCJoqgiSJoogiaKIImiqCJImiiCJoogiaKoIkiaKIImiiCJoqgiSJoogiaKIImiqCJImii/B79AL66vl5GPwQWurxcRz+Evx4qvHOSiHOMjnv4KYeYs4ye57ANPfoXZ38jtvWQDS3mcxgx5+5Bi/lces97+Dk0tNQ1aNv5nHrOvVvQYj63XvN3ykEUQROlS9BON5imPh3Y0EQRNFEETRRBE0XQRBE0UQRNFEETRdBEETRRBE0UQRNF0EQRNFEETRRBE0XQRCn3Zo3fGf1+aXyofvdR+Q0t5lqqz6N00NUP3llVnkvpoGEpQROldNDVn4CcVeW5lA56mmofvDOqPo9DXLarfhCpo/yGhiUETRRBE0XQRBE0UQRNFEETRdBEETRRBE0UQRNF0EQRNFEETRRBE0XQRBE0UQ5xx0rl2+bPpvrdQ+U3tJhrqT6P0kFXP3hnVXkupYOGpQRNlNJBV38CclaV51I66GmqffDOqPo8DnHZrvpBpI7yGxqWEDRRBE0UQRNF0EQRNFEETRRBE0XQRBE0UQRNFEETRdBEETRRBE0UQRNF0EQ5xB0rlW+bZ55edx2V39BiztBrjqWDFnOWHvMsHTQsJWiilA7a2xdk6THP0kFPk6hT9JrjIS7biZq5ym9oWELQRBH0QbgmP4+gD+A9ZlHfJ+jivkYs6p8JurBb8Yr6NkEXdS9aUX9P0AXNjVXU/xP0wYn6M0EXszRQ/0X9TNCFiHk7QRch5jYEXYCY2xH0YGJuS9ArtLqyIOb2BL1Qq9dVuNy2D0Ev0Op1FWu+z3aeR9AztXpdhZj3JegZWr2uQsz7E/QdrWIVcx+C/kGP04lbxLyOoH+wJqrLy3Xzk0cxryfoO9bGtfbynpi3EfQMW6Pe++fwQdAz7R2bmNsQ9AJ7RSfmdgS90PX10jRAMbcl6JWEWJOgN9gatT+K9gS90dooxbwPQTewNE4x70fQjcyNVMz7EnRDt2J9/7qY9/fw+PT81uMHGSY+1g0WEjRRugXtptBzi/xoZFGfU8+5O+UgSvegbelz6T3vIRta1OcwYs7drkPf4vp0npELa/g5tG2dZfQ8h2/or2zs4xkd8b/KBQ1bDD/lgJYETRRBE0XQRBE0UQRNFEETRdBEETRRBE0UQRNF0EQRNFEETRRBE0XQRBE0UQRNFEETRdBEETRRBE0UQRPlDwTE47nVSg2+AAAAAElFTkSuQmCC">
+<link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAEEElEQVR4nO3dwVEbQRRF0cHlFGBBGORFNORFSnjhogAbkDTq7j+fd87SCyOr32WQkOSb27v7lw1C/aq+AVBJAEQTANEEQDQBEE0ARBMA0QRANAEQTQBEEwDRBEA0ARBNAEQTANEEQDQBEE0ARBMA0QRANAEQTQBEEwDRBEA0ARDtd/UN+Mrz00P1TWCwh8fn6pvwn5sjfTSi0ec4SgyHCMDwc1WHUP4YwPizVZ9/aQDV/3iOoXIHZQEYP+9V7aEkAOPnMxW7WB6A8fOd1fsofxAMlZYG4Ls/51i5E1cAogmAaMsC8OMPl1i1F1cAogmAaAIgmgCIJgCiCYBoAiCaAIgmAKIJgGgCIJoAiCYAogmAaAIgmgCIJgCiCYBoh/149M9Uf5Aq5+vyFtg2VwDj76XLebUIoMudyUcdzq1FADCLAIjWIoAuD6j4qMO5tQhg23rcmbzpcl6tngbtcqfSR5srAMwgAKIJgGgCIJoAiCYAogmAaAIgmgCIJgCiCYBoAiCaAIgmAKIJgGgCIJoAiCYAogmAaK3eE9zhg5b4q8v7t9tcAYy/ly7n1SKALncmH3U4txYBwCwCIFqLALo8oOKjDufWIoBt63Fn8qbLebV6GrTLnUofba4AMIMAiCYAogmAaAIgmgCIJgCiCYBoAiCaAIgmAKIJgGgCIJoAiCYAogmAaAIgmgCIJgCitXpPcIcPWuJ6K9/73eYKYPw5Vp51iwCMP8+qM28RAMwiAKK1CMAHYuVZdeYtAtg2ESRZedatngYVAaO1uQLADAIgmgCIJoAfwi8L9xHAD/A6fhFcTgDN/Tt6EVxGAI19NXYRnE8ATZ0auQjOI4CGzh23CE4TQDOXjloE3xPAD+flI98TQCOXfjc3/tME0ITxzyGABox/HgEcnPHPJYADM/75BDDI6KcbPX25hgAGGP1itD1/j+/++wjgSqNfjGb8awngCqNfjGb86wlgp9EvRjP+GgLYYfSL0Yy/jgAuNPo7u/HXEsCF9ozv4fF52DNExj+WAHbYO8JrnzEy/vEEsNO1ERj/MQjgCqOuBLO+DqcJ4Eqzx2n8cwlggFkjNf75BDDI89ODwTYkgMFGRSCmNQQwwbXjNf51BDDJ3hEb/1oCmOjSMRv/egKY7NxRG38NASzw1bhf/9z469zc3t2/rPpiDppz+Z/iYQEBEG1pAD7qg3Os3IkrANGWB+AqwHdW76PkCiACPlOxi7IfgUTAe1V7KH0MIAK2rXYH5Q+CRZCt+vyX/ib4FL8pzlE9/FeHCuA9Mfw8Rxn9e4cNAFYofwwAlQRANAEQTQBEEwDRBEA0ARBNAEQTANEEQDQBEE0ARBMA0QRANAEQTQBEEwDRBEA0ARBNAEQTANEEQDQBEE0ARPsD1uby0fMcjYYAAAAASUVORK5CYII=">
+<link rel="manifest" href="data:application/manifest+json;charset=utf-8,{"name":"ปิดยอด","short_name":"ปิดยอด","lang":"th","display":"standalone","background_color":"%2315161a","theme_color":"%2315161a","start_url":".","icons":[{"src":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAEEElEQVR4nO3dwVEbQRRF0cHlFGBBGORFNORFSnjhogAbkDTq7j+fd87SCyOr32WQkOSb27v7lw1C/aq+AVBJAEQTANEEQDQBEE0ARBMA0QRANAEQTQBEEwDRBEA0ARBNAEQTANEEQDQBEE0ARBMA0QRANAEQTQBEEwDRBEA0ARDtd/UN+Mrz00P1TWCwh8fn6pvwn5sjfTSi0ec4SgyHCMDwc1WHUP4YwPizVZ9/aQDV/3iOoXIHZQEYP+9V7aEkAOPnMxW7WB6A8fOd1fsofxAMlZYG4Ls/51i5E1cAogmAaMsC8OMPl1i1F1cAogmAaAIgmgCIJgCiCYBoAiCaAIgmAKIJgGgCIJoAiCYAogmAaAIgmgCIJgCiCYBoh/149M9Uf5Aq5+vyFtg2VwDj76XLebUIoMudyUcdzq1FADCLAIjWIoAuD6j4qMO5tQhg23rcmbzpcl6tngbtcqfSR5srAMwgAKIJgGgCIJoAiCYAogmAaAIgmgCIJgCiCYBoAiCaAIgmAKIJgGgCIJoAiCYAogmAaK3eE9zhg5b4q8v7t9tcAYy/ly7n1SKALncmH3U4txYBwCwCIFqLALo8oOKjDufWIoBt63Fn8qbLebV6GrTLnUofba4AMIMAiCYAogmAaAIgmgCIJgCiCYBoAiCaAIgmAKIJgGgCIJoAiCYAogmAaAIgmgCIJgCitXpPcIcPWuJ6K9/73eYKYPw5Vp51iwCMP8+qM28RAMwiAKK1CMAHYuVZdeYtAtg2ESRZedatngYVAaO1uQLADAIgmgCIJoAfwi8L9xHAD/A6fhFcTgDN/Tt6EVxGAI19NXYRnE8ATZ0auQjOI4CGzh23CE4TQDOXjloE3xPAD+flI98TQCOXfjc3/tME0ITxzyGABox/HgEcnPHPJYADM/75BDDI6KcbPX25hgAGGP1itD1/j+/++wjgSqNfjGb8awngCqNfjGb86wlgp9EvRjP+GgLYYfSL0Yy/jgAuNPo7u/HXEsCF9ozv4fF52DNExj+WAHbYO8JrnzEy/vEEsNO1ERj/MQjgCqOuBLO+DqcJ4Eqzx2n8cwlggFkjNf75BDDI89ODwTYkgMFGRSCmNQQwwbXjNf51BDDJ3hEb/1oCmOjSMRv/egKY7NxRG38NASzw1bhf/9z469zc3t2/rPpiDppz+Z/iYQEBEG1pAD7qg3Os3IkrANGWB+AqwHdW76PkCiACPlOxi7IfgUTAe1V7KH0MIAK2rXYH5Q+CRZCt+vyX/ib4FL8pzlE9/FeHCuA9Mfw8Rxn9e4cNAFYofwwAlQRANAEQTQBEEwDRBEA0ARBNAEQTANEEQDQBEE0ARBMA0QRANAEQTQBEEwDRBEA0ARBNAEQTANEEQDQBEE0ARPsD1uby0fMcjYYAAAAASUVORK5CYII=","sizes":"192x192","type":"image/png"},{"src":"data:image/png;base64,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","sizes":"512x512","type":"image/png"}]}">
+<title>ปิดยอด — สร้างใบปิดยอด</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/xlsx-js-style@1.2.0/dist/xlsx.bundle.js"></script>
+<style>
+  :root {
+    --bg: #15161a;
+    --panel: #1d1f25;
+    --panel-2: #23252c;
+    --line: #33353d;
+    --text: #eceef2;
+    --muted: #8d909c;
+    --accent: #e3a94c;
+    --accent-soft: rgba(227,169,76,0.14);
+    --ok: #5fbf82;
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  html { scroll-padding-top: env(safe-area-inset-top, 0px); }
+  * { box-sizing: inherit; }
+  body {
+    margin: 0; min-height: 100%;
+    background: var(--bg); color: var(--text);
+    font-family: 'Noto Sans Thai', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 1020px; margin: 0 auto; padding: 28px 20px 60px; }
+  header { display: flex; align-items: baseline; gap: 10px; margin-bottom: 22px; flex-wrap: wrap; }
+  header .mark {
+    font-family: 'IBM Plex Mono', monospace; color: var(--accent); font-size: 13px;
+    letter-spacing: 0.04em; background: var(--accent-soft);
+    border: 1px solid rgba(227,169,76,0.35); padding: 3px 8px; border-radius: 6px;
+  }
+  h1 { font-size: 22px; margin: 0; font-weight: 700; }
+  header p { width: 100%; margin: 6px 0 0; color: var(--muted); font-size: 14px; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: start; }
+  @media (max-width: 820px) { .grid { grid-template-columns: 1fr; } }
+  .card { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; }
+  .card + .card { margin-top: 12px; }
+  .section-title { font-size: 12px; color: var(--muted); margin: 0 0 12px; font-weight: 600; }
+  .field { margin-bottom: 10px; }
+  .field:last-child { margin-bottom: 0; }
+  .field label { display: block; font-size: 12.5px; color: var(--muted); margin-bottom: 4px; }
+  .row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  input, textarea, select {
+    width: 100%; background: var(--panel-2); border: 1px solid var(--line); color: var(--text);
+    border-radius: 7px; padding: 9px 10px; font-size: 14px; font-family: inherit;
+    outline: none; transition: border-color .15s;
+  }
+  input:focus, textarea:focus, select:focus { border-color: var(--accent); }
+  textarea { resize: vertical; min-height: 52px; line-height: 1.5; }
+  .num-row { display: flex; gap: 8px; align-items: center; }
+  .num-row input { font-family: 'IBM Plex Mono', monospace; max-width: 110px; }
+  .num-row .sep { color: var(--muted); font-family: 'IBM Plex Mono', monospace; }
+  .toggle-row { display: flex; align-items: center; gap: 10px; margin-top: 12px; }
+  .toggle-btn {
+    font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; border-radius: 999px;
+    padding: 6px 12px; border: 1px solid var(--line); background: var(--panel-2); color: var(--muted);
+    cursor: pointer; transition: all .15s;
+  }
+  .toggle-btn.on { background: var(--accent-soft); border-color: var(--accent); color: var(--accent); }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; }
+  .chip {
+    font-size: 13px; padding: 6px 12px; border-radius: 999px; border: 1px solid var(--line);
+    background: var(--panel-2); color: var(--text); cursor: pointer; transition: all .15s;
+  }
+  .chip:hover { border-color: var(--muted); }
+  .chip.active { background: var(--accent-soft); border-color: var(--accent); color: var(--accent); }
+  .sticky-preview { position: sticky; top: 16px; }
+  .receipt { background: var(--panel); border: 1px dashed var(--line); border-radius: 10px; padding: 16px; }
+  .receipt-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+  .receipt-head .section-title { margin: 0; }
+  pre.output {
+    font-family: 'IBM Plex Mono', monospace; font-size: 13px; line-height: 1.65;
+    white-space: pre-wrap; word-break: break-word; color: var(--text); margin: 0;
+    min-height: 42vh; max-height: 42vh; overflow-y: auto; cursor: text; border-radius: 6px;
+  }
+  pre.output:focus { outline: 1px solid var(--accent); }
+  #outputPay { min-height: 0; }
+  #productCard .field { margin-bottom: 8px; }
+  #productCard .chips { margin-bottom: 6px; gap: 6px; }
+  #productCard label { margin-bottom: 3px; }
+  .actions { display: flex; gap: 10px; margin-top: 12px; flex-wrap: wrap; align-items: center; }
+  button.btn { font-family: inherit; font-size: 14px; font-weight: 600; border-radius: 7px; padding: 9px 15px; border: 1px solid transparent; cursor: pointer; transition: background .15s, border-color .15s; }
+  .btn-primary { background: var(--accent); color: #1a1206; }
+  .btn-primary:hover { background: #edb862; }
+  .btn-ghost { background: transparent; border-color: var(--line); color: var(--text); }
+  .btn-ghost:hover { border-color: var(--muted); }
+  .toast { font-size: 12.5px; color: var(--ok); opacity: 0; transition: opacity .2s; }
+  .toast.show { opacity: 1; }
+  .hint { font-size: 11.5px; color: var(--muted); margin-top: 8px; }
+  .search-item { border-bottom: 1px solid var(--line); padding: 10px 0; }
+  .search-item:last-child { border-bottom: none; }
+  .search-item .doc { font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; color: var(--accent); }
+  .search-item .name { font-weight: 600; margin-top: 2px; }
+  .search-item .meta { font-size: 13px; color: var(--muted); margin-top: 2px; }
+  .search-item .time { font-size: 11.5px; color: var(--muted); margin-top: 4px; }
+  .search-item .row-btns { display: flex; gap: 8px; margin-top: 8px; }
+  #searchInput { margin-bottom: 4px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <span class="mark">#ปิดยอด</span>
+    <h1>สร้างใบปิดยอด</h1>
+    <p>กรอกข้อมูลด้านซ้าย ข้อความพร้อมส่งจะขึ้นด้านขวา — ปิดยอดกับยอดโอนคัดลอกแยกกันได้</p>
+  </header>
+
+  <div class="grid">
+    <!-- FORM -->
+    <div>
+      <div class="card" style="padding:10px 16px; display:flex; align-items:center; gap:10px; flex-wrap:wrap;">
+        <p class="section-title" style="margin:0;">เลขที่เอกสาร</p>
+        <div class="num-row" style="margin:0;">
+          <span class="sep">#</span>
+          <input id="docDate" inputmode="numeric" pattern="[0-9]*" style="width:80px;">
+          <span class="sep">-</span>
+          <input id="docSeq" inputmode="numeric" pattern="[0-9]*" style="width:56px;">
+        </div>
+        <button type="button" class="toggle-btn on" id="hashTag" data-on="true" style="margin-left:auto;">#ปิดยอด: แสดง</button>
+      </div>
+
+      <div class="card">
+        <div class="field"><label>ชื่อลูกค้า</label><input id="customerName" placeholder="เช่น สุปราณี นนชนะ"></div>
+        <div class="row2">
+          <div class="field"><label>ID ลูกค้า FB</label><input id="fbId"></div>
+          <div class="field"><label>ID ลูกค้า LINE</label><input id="lineId"></div>
+        </div>
+      </div>
+
+      <div class="card" id="productCard">
+        <p class="section-title">รายละเอียดสินค้า</p>
+        <div class="field">
+          <div style="display:flex; gap:8px;">
+            <textarea id="productDetail" placeholder="เช่น iPhone 13 Pro Max 128GB" rows="1" style="flex:1; resize:none; overflow:hidden; line-height:1.5;"></textarea>
+            <button type="button" class="btn btn-ghost" id="phonePickerBtn" style="white-space:nowrap; align-self:flex-start;">มือถือ</button>
+          </div>
+          <div id="phonePickerPanel" style="display:none; margin-top:8px;">
+            <div class="row2">
+              <select id="phoneModelSelect"></select>
+              <select id="phoneStorageSelect"></select>
+            </div>
+            <div class="actions" style="margin-top:8px;">
+              <button type="button" class="btn btn-primary" id="phoneInsertBtn">ใช้ข้อมูลนี้</button>
+              <button type="button" class="btn btn-ghost" id="phoneCancelBtn">ยกเลิก</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="field">
+          <label>อุปกรณ์</label>
+          <div class="chips" id="accessoryChips">
+            <button type="button" class="chip" data-value="เครื่อง">เครื่อง</button>
+            <button type="button" class="chip" data-value="กล่อง">กล่อง</button>
+            <button type="button" class="chip" data-value="สายชาร์จ">สายชาร์จ</button>
+            <button type="button" class="chip" data-value="อะแดปเตอร์">อะแดปเตอร์</button>
+          </div>
+          <input id="accessories" placeholder="ผลลัพธ์จะขึ้นที่นี่ แก้ไขเองได้">
+        </div>
+
+        <div class="row2">
+          <div class="field">
+            <label>ประกัน</label>
+            <div class="chips" id="warrantyChips">
+              <button type="button" class="chip" data-value="หมดประกัน">หมดประกัน</button>
+              <button type="button" class="chip" data-value="รอเช็ค">รอเช็ค</button>
+            </div>
+            <input id="warranty" placeholder="เลือกปุ่ม/พิมพ์เอง">
+          </div>
+          <div class="field"><label>ข้อมูลเพิ่มเติม</label><input id="extraInfo"></div>
+        </div>
+
+        <div class="field">
+          <label>สภาพสินค้า</label>
+          <div class="chips" id="conditionChips">
+            <button type="button" class="chip" data-value="ไม่มีตำหนิ">ไม่มีตำหนิ</button>
+            <button type="button" class="chip" data-value="รอยตามการใช้งาน">รอยตามการใช้งาน</button>
+            <button type="button" class="chip" data-value="บุบ">บุบ</button>
+            <button type="button" class="chip" data-value="รอยขนแมว">รอยขนแมว</button>
+          </div>
+          <textarea id="condition" placeholder="เลือกปุ่มด้านบน หรือพิมพ์/เพิ่มรายละเอียดเอง" style="min-height:38px;"></textarea>
+        </div>
+
+        <div class="row2">
+          <div class="field">
+            <label>สุขภาพแบต (%)</label>
+            <div class="chips" id="batteryChips">
+              <button type="button" class="chip" data-value="ปกติ">ปกติ</button>
+            </div>
+            <input id="battery" inputmode="numeric" pattern="[0-9]*" placeholder="เช่น 76 / ปกติ">
+          </div>
+          <div class="field">
+            <label>รอบชาร์จ</label>
+            <div class="chips" id="cycleChips">
+              <button type="button" class="chip" data-value="รอเช็ค">รอเช็ค</button>
+            </div>
+            <input id="cycleCount" inputmode="numeric" pattern="[0-9]*" placeholder="เช่น 120 / รอเช็ค">
+          </div>
+        </div>
+
+        <div class="field">
+          <label>รับ (ราคาซื้อเข้า)</label>
+          <div class="row2">
+            <input id="buyPriceMin" inputmode="numeric" pattern="[0-9]*" placeholder="ราคาแรก เช่น 5300">
+            <input id="buyPriceMax" inputmode="numeric" pattern="[0-9]*" placeholder="ราคาสอง (ถ้ามี) เช่น 5800">
+          </div>
+        </div>
+        <div class="field">
+          <label>ขาย (ราคาขายออก)</label>
+          <div style="display:flex; gap:8px;">
+            <input id="sellPrice" inputmode="numeric" pattern="[0-9]*" placeholder="เช่น 12590" style="flex:1;">
+            <button type="button" class="btn btn-ghost" id="calcBuyBtn" style="white-space:nowrap;">คำนวณราคารับ</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" id="payFormCard">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:4px;">
+          <p class="section-title" style="margin:0;">บัญชีรับโอน</p>
+          <button type="button" class="btn btn-ghost" id="togglePayBtn" style="padding:4px 10px; font-size:12px;">ซ่อน</button>
+        </div>
+        <div id="payFormBody">
+          <div class="field">
+            <label>เลขบัญชี</label><input id="accNumber" inputmode="numeric" pattern="[0-9]*" placeholder="เช่น 0658543431">
+          </div>
+          <div class="field">
+            <label>ธนาคาร</label>
+            <div class="chips" id="bankChips">
+              <button type="button" class="chip" data-value="กรุงไทย">กรุงไทย</button>
+              <button type="button" class="chip" data-value="กสิกร">กสิกร</button>
+              <button type="button" class="chip" data-value="ไทยพาณิชย์">ไทยพาณิชย์</button>
+              <button type="button" class="chip" data-value="กรุงเทพ">กรุงเทพ</button>
+            </div>
+            <input id="bankName" placeholder="เลือกปุ่มด้านบน หรือพิมพ์เอง">
+          </div>
+          <div class="row2">
+            <div class="field"><label>ชื่อบัญชี</label><input id="accHolder"></div>
+            <div class="field"><label>ยอดโอน</label><input id="transferAmount" inputmode="numeric" pattern="[0-9]*" placeholder="เช่น 10000"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PREVIEW -->
+    <div class="sticky-preview">
+      <div class="receipt">
+        <div class="receipt-head"><p class="section-title">ข้อความปิดยอด</p></div>
+        <pre class="output" id="outputDeal" contenteditable="true" spellcheck="false"></pre>
+        <p class="hint">แก้ไขหรือวางข้อความจากที่อื่นตรงนี้ได้โดยตรง — แก้แล้วช่องฟอร์มด้านซ้ายจะอัปเดตตามให้อัตโนมัติ</p>
+        <div class="actions">
+          <button class="btn btn-primary" id="copyDealBtn">คัดลอกทั้งหมด</button>
+          <button class="btn btn-primary" id="copyDealPartialBtn">คัดลอก: รายละเอียดสินค้า–รับ</button>
+          <span class="toast" id="toastDeal">คัดลอกแล้ว</span>
+          <span class="toast" id="toastDealPartial">คัดลอกแล้ว</span>
+        </div>
+        <div class="actions" style="margin-top:8px; justify-content:flex-end;">
+          <span class="toast" id="toastPasteDeal">กด Ctrl+V เพื่อวางข้อความ</span>
+          <button type="button" class="btn btn-ghost" id="pasteDealBtn">วางข้อความ</button>
+        </div>
+        <div class="actions" style="margin-top:8px; justify-content:flex-end;">
+          <button type="button" class="btn btn-ghost" id="clearDealBtn">ล้างข้อมูลรายละเอียดสินค้าทั้งหมด</button>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top:16px;" id="payPreviewCard">
+        <p class="section-title">ข้อมูลยอดโอน</p>
+        <pre class="output" id="outputPay" contenteditable="true" spellcheck="false"></pre>
+        <p class="hint">แก้ไขหรือวางข้อความจากที่อื่นตรงนี้ได้โดยตรงเช่นกัน</p>
+        <div class="actions">
+          <button class="btn btn-primary" id="copyPayBtn">คัดลอกยอดโอน</button>
+          <span class="toast" id="toastPay">คัดลอกแล้ว</span>
+        </div>
+        <div class="actions" style="margin-top:8px; justify-content:flex-end;">
+          <span class="toast" id="toastPastePay">กด Ctrl+V เพื่อวางข้อความ</span>
+          <button type="button" class="btn btn-ghost" id="pastePayBtn">วางข้อความ</button>
+        </div>
+        <div class="actions" style="margin-top:8px; justify-content:flex-end;">
+          <button type="button" class="btn btn-ghost" id="clearPayBtn">ล้างข้อมูลบัญชีรับโอนทั้งหมด</button>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top:16px;">
+        <div class="actions" style="justify-content:center;">
+          <button class="btn btn-ghost" id="nextBtn">เริ่มใบใหม่ (เลขถัดไป)</button>
+          <button class="btn btn-primary" id="submitBtn">ส่ง</button>
+          <button class="btn btn-ghost" id="searchBtn">ค้นหาใบที่เคยทำ</button>
+        </div>
+        <p class="hint" style="text-align:center;">กด "ส่ง" เพื่อบันทึกใบนี้ (เก็บในเครื่องก่อน แล้วส่งขึ้น Google Sheet ให้อัตโนมัติถ้าตั้งค่าไว้)</p>
+        <p class="hint" style="text-align:center; margin-top:2px;"><span id="sheetStatus"></span> <button type="button" class="btn btn-ghost" id="sheetSettingsBtn" style="padding:3px 10px; font-size:12px;">ตั้งค่า Google Sheet</button></p>
+        <span class="toast" id="toastSubmit" style="display:block; text-align:center; margin-top:2px;">บันทึกแล้ว</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="searchOverlay" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.65); z-index:1000; align-items:center; justify-content:center; padding:20px;">
+  <div style="background:var(--panel); border:1px solid var(--line); border-radius:12px; max-width:640px; width:100%; height:min(82vh, 720px); display:flex; flex-direction:column; padding:18px;">
+    <div style="display:flex; justify-content:space-between; align-items:center; gap:10px; margin-bottom:12px;">
+      <p class="section-title" style="margin:0;">ค้นหาใบที่เคยทำ</p>
+      <div style="display:flex; gap:8px;">
+        <button type="button" class="btn btn-ghost" id="downloadExcelBtn">ดาวน์โหลด Excel</button>
+        <button type="button" class="btn btn-ghost" id="closeSearchBtn">ปิด</button>
+      </div>
+    </div>
+    <div class="chips" id="hashFilter" style="margin-bottom:8px;">
+      <button type="button" class="chip active" data-f="all">ทั้งหมด</button>
+      <button type="button" class="chip" data-f="yes">#ปิดยอด</button>
+      <button type="button" class="chip" data-f="no">ประเมิน</button>
+    </div>
+    <input id="searchInput" placeholder="ค้นหาด้วยชื่อลูกค้า, LINE ID, เลขที่เอกสาร, สินค้า">
+    <div id="searchResults" style="margin-top:12px; overflow-y:auto; flex:1;"></div>
+  </div>
+</div>
+
+<div id="sheetOverlay" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.65); z-index:1100; align-items:center; justify-content:center; padding:20px;">
+  <div style="background:var(--panel); border:1px solid var(--line); border-radius:12px; max-width:560px; width:100%; max-height:88vh; overflow-y:auto; padding:18px;">
+    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+      <p class="section-title" style="margin:0;">ตั้งค่า Google Sheet</p>
+      <button type="button" class="btn btn-ghost" id="closeSheetBtn">ปิด</button>
+    </div>
+    <div class="field"><label>ลิงก์ Web App (Apps Script)</label><input id="sheetUrl" placeholder="https://script.google.com/macros/s/.../exec" autocapitalize="none" autocomplete="off"></div>
+    <div class="field"><label>รหัสลับ (ตรงกับ SECRET ใน Code.gs)</label><input id="sheetKey" type="password" autocomplete="off"></div>
+    <div style="display:flex; gap:8px; flex-wrap:wrap;">
+      <button type="button" class="btn btn-primary" id="sheetSaveBtn">บันทึกและทดสอบ</button>
+      <button type="button" class="btn btn-ghost" id="sheetSyncBtn">ซิงก์เดี๋ยวนี้</button>
+      <button type="button" class="btn btn-ghost" id="sheetOffBtn">ตัดการเชื่อมต่อ</button>
+    </div>
+    <p class="hint" id="sheetMsg" style="min-height:18px;"></p>
+    <p class="hint">ข้อมูลใบที่ส่งจะเก็บในเครื่องก่อนเสมอ (ใช้ออฟไลน์ได้) แล้วส่งขึ้น Google Sheet เมื่อมีเน็ต ทุกเครื่องที่ตั้งค่าเดียวกันจะเห็นข้อมูลชุดเดียวกัน<br>
+    เรทราคารับดึงจากแท็บ "rates" ในชีตเดียวกันทุกครั้งที่ซิงก์ — แก้ตัวเลขในชีตแล้วทุกเครื่องได้เรทใหม่</p>
+  </div>
+</div>
+
+<div id="viewOverlay" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.55); z-index:1100; align-items:center; justify-content:center; padding:20px;">
+  <div style="background:var(--panel); border:1px solid var(--line); border-radius:12px; max-width:560px; width:100%; height:min(70vh, 560px); display:flex; flex-direction:column; padding:16px;">
+    <div style="display:flex; justify-content:space-between; align-items:center; gap:10px; margin-bottom:10px;">
+      <p class="section-title" style="margin:0;" id="viewTitle"></p>
+      <button type="button" class="btn btn-ghost" id="closeViewBtn">ปิด</button>
+    </div>
+    <pre class="output" id="viewBody" style="flex:1; overflow:auto; margin:0; min-height:0; font-size:13px;"></pre>
+  </div>
+</div>
+
+<div id="calcBuyOverlay" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.65); z-index:1000; align-items:center; justify-content:center; padding:20px;">
+  <div style="background:var(--panel); border:1px solid var(--line); border-radius:12px; max-width:420px; width:100%; max-height:86vh; overflow-y:auto; padding:18px;">
+    <div style="display:flex; justify-content:space-between; align-items:center; gap:10px; margin-bottom:14px;">
+      <p class="section-title" style="margin:0;">คำนวณราคารับ</p>
+      <button type="button" class="btn btn-ghost" id="closeCalcBuyBtn" style="padding:4px 10px; font-size:12px;">ปิด</button>
+    </div>
+    <div class="field">
+      <label>ประเภทสินค้า</label>
+      <select id="calcCategory"></select>
+    </div>
+    <div class="field">
+      <label>ราคาขาย</label>
+      <input id="calcSellPrice" inputmode="numeric" pattern="[0-9]*" placeholder="เช่น 7990">
+    </div>
+    <div id="calcBuyResult" style="margin-top:14px;"></div>
+    <div style="border-top:1px solid var(--line); margin-top:14px; padding-top:12px;">
+      <div class="field" style="margin-bottom:8px;">
+        <label>ชุดเรทราคา</label>
+        <select id="rateSetSelect"></select>
+      </div>
+      <div style="display:flex; gap:8px;">
+        <button type="button" class="btn btn-ghost" id="uploadRatesBtn" style="flex:1;">เพิ่มไฟล์เรท Excel (.xlsx)</button>
+        <button type="button" class="btn btn-ghost" id="deleteRateSetBtn">ลบชุดนี้</button>
+      </div>
+      <input type="file" id="ratesFileInput" accept=".xlsx,.xls" style="display:none;">
+      <div id="sheetPickPanel" style="display:none; border:1px solid var(--accent); border-radius:8px; padding:10px 12px; margin-top:10px;">
+        <div class="field" style="margin-bottom:8px;">
+          <label id="sheetPickLabel">เลือกแท็บที่ต้องการใช้</label>
+          <select id="sheetPickSelect"></select>
+        </div>
+        <div style="display:flex; gap:8px;">
+          <button type="button" class="btn btn-primary" id="sheetPickOkBtn" style="flex:1;">ใช้แท็บนี้</button>
+          <button type="button" class="btn btn-ghost" id="sheetPickCancelBtn">ยกเลิก</button>
+        </div>
+      </div>
+      <p class="hint" id="ratesStatus"></p>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  const $ = id => document.getElementById(id);
+  const dealFields = ['customerName','fbId','lineId','productDetail','accessories','warranty',
+    'condition','battery','cycleCount','extraInfo','buyPriceMin','buyPriceMax','sellPrice','docDate','docSeq'];
+  const payFields = ['accNumber','bankName','accHolder','transferAmount'];
+
+  const STORE_KEY = 'pidyord_defaults_v2';
+  const SEQ_KEY = 'pidyord_last_seq_v1';
+
+  function todayCode(){
+    const d = new Date();
+    const yy = String(d.getFullYear()).slice(-2);
+    const mm = String(d.getMonth()+1).padStart(2,'0');
+    const dd = String(d.getDate()).padStart(2,'0');
+    return yy+mm+dd;
+  }
+
+  // ---- chip helpers ----
+  function toggleInMultiField(fieldEl, tag, joiner){
+    let items = fieldEl.value.split(/[,\s]+/).map(s=>s.trim()).filter(Boolean);
+    const idx = items.indexOf(tag);
+    if (idx >= 0) items.splice(idx,1); else items.push(tag);
+    fieldEl.value = items.join(joiner);
+    render();
+  }
+
+  function wireMultiChips(groupId, fieldEl, joiner){
+    joiner = joiner || ', ';
+    const group = $(groupId);
+    group.querySelectorAll('.chip').forEach(btn => {
+      btn.addEventListener('click', () => {
+        btn.classList.toggle('active');
+        toggleInMultiField(fieldEl, btn.dataset.value, joiner);
+      });
+    });
+  }
+
+  function wireSingleChips(groupId, fieldEl){
+    const group = $(groupId);
+    const chips = group.querySelectorAll('.chip');
+    chips.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const wasActive = btn.classList.contains('active');
+        chips.forEach(c => c.classList.remove('active'));
+        if (wasActive) {
+          fieldEl.value = '';
+        } else {
+          btn.classList.add('active');
+          fieldEl.value = btn.dataset.value;
+        }
+        render();
+      });
+    });
+  }
+
+  wireMultiChips('accessoryChips', $('accessories'), ' ');
+  wireSingleChips('warrantyChips', $('warranty'));
+  wireMultiChips('conditionChips', $('condition'), ' ');
+  wireSingleChips('bankChips', $('bankName'));
+
+  $('togglePayBtn').addEventListener('click', () => {
+    const hidden = $('payFormBody').style.display === 'none';
+    $('payFormBody').style.display = hidden ? '' : 'none';
+    $('payPreviewCard').style.display = hidden ? '' : 'none';
+    $('togglePayBtn').textContent = hidden ? 'ซ่อน' : 'แสดง';
+  });
+  wireSingleChips('cycleChips', $('cycleCount'));
+  wireSingleChips('batteryChips', $('battery'));
+  $('battery').addEventListener('input', () => syncSingleChipGroup('batteryChips', $('battery').value));
+
+  // ---- phone model picker ----
+  const phoneStorageMap = {
+    'iPhone 11': ['64GB', '128GB', '256GB'],
+    'iPhone 11 Pro': ['64GB', '256GB', '512GB'],
+    'iPhone 11 Pro Max': ['64GB', '256GB', '512GB'],
+    'iPhone 12 Mini': ['64GB', '128GB', '256GB'],
+    'iPhone 12': ['64GB', '128GB', '256GB'],
+    'iPhone 12 Pro': ['128GB', '256GB', '512GB'],
+    'iPhone 12 Pro Max': ['128GB', '256GB', '512GB'],
+    'iPhone 13 Mini': ['128GB', '256GB', '512GB'],
+    'iPhone 13': ['128GB', '256GB', '512GB'],
+    'iPhone 13 Pro': ['128GB', '256GB', '512GB', '1TB'],
+    'iPhone 13 Pro Max': ['128GB', '256GB', '512GB', '1TB'],
+    'iPhone 14': ['128GB', '256GB', '512GB'],
+    'iPhone 14 Plus': ['128GB', '256GB', '512GB'],
+    'iPhone 14 Pro': ['128GB', '256GB', '512GB', '1TB'],
+    'iPhone 14 Pro Max': ['128GB', '256GB', '512GB', '1TB'],
+    'iPhone 15': ['128GB', '256GB', '512GB'],
+    'iPhone 15 Plus': ['128GB', '256GB', '512GB'],
+    'iPhone 15 Pro': ['128GB', '256GB', '512GB', '1TB'],
+    'iPhone 15 Pro Max': ['256GB', '512GB', '1TB'],
+    'iPhone 16': ['128GB', '256GB', '512GB'],
+    'iPhone 16 Plus': ['128GB', '256GB', '512GB'],
+    'iPhone 16 Pro': ['128GB', '256GB', '512GB', '1TB'],
+    'iPhone 16 Pro Max': ['256GB', '512GB', '1TB'],
+    'iPhone 16e': ['128GB', '256GB', '512GB'],
+    'iPhone 17': ['256GB', '512GB'],
+    'iPhone Air': ['256GB', '512GB', '1TB'],
+    'iPhone 17 Pro': ['256GB', '512GB', '1TB'],
+    'iPhone 17 Pro Max': ['256GB', '512GB', '1TB', '2TB']
+  };
+  const iphoneModels = Object.keys(phoneStorageMap);
+
+  function populateSelect(id, options, placeholder){
+    const el = $(id);
+    el.innerHTML = `<option value="">${placeholder}</option>` +
+      options.map(o => `<option value="${o}">${o}</option>`).join('');
+  }
+  populateSelect('phoneModelSelect', iphoneModels, 'เลือกรุ่น');
+  populateSelect('phoneStorageSelect', [], 'เลือกรุ่นก่อน');
+
+  $('phoneModelSelect').addEventListener('change', () => {
+    const model = $('phoneModelSelect').value;
+    const options = phoneStorageMap[model] || [];
+    populateSelect('phoneStorageSelect', options, options.length ? 'เลือกความจุ (ไม่บังคับ)' : 'เลือกรุ่นก่อน');
+  });
+
+  $('phonePickerBtn').addEventListener('click', () => {
+    const panel = $('phonePickerPanel');
+    panel.style.display = panel.style.display === 'none' ? 'block' : 'none';
+  });
+  $('phoneCancelBtn').addEventListener('click', () => {
+    $('phonePickerPanel').style.display = 'none';
+  });
+  $('phoneInsertBtn').addEventListener('click', () => {
+    const model = $('phoneModelSelect').value;
+    const storage = $('phoneStorageSelect').value;
+    if (!model) return;
+    $('productDetail').value = storage ? `${model} ${storage}` : model;
+    $('productDetail').dispatchEvent(new Event('input'));
+    $('phonePickerPanel').style.display = 'none';
+  });
+
+  // ---- header toggle ----
+  const hashTag = $('hashTag');
+  hashTag.addEventListener('click', () => {
+    const wasOn = hashTag.dataset.on === 'true';
+    const nowOn = !wasOn;
+    hashTag.dataset.on = nowOn.toString();
+    hashTag.classList.toggle('on', nowOn);
+    hashTag.textContent = nowOn ? '#ปิดยอด: แสดง' : '#ปิดยอด: ซ่อน';
+    syncCustomerNameWithToggle();
+    render();
+  });
+
+  // ช่องชื่อลูกค้าแสดงข้อมูลเฉพาะตอน #ปิดยอด แสดงอยู่เท่านั้น
+  function syncCustomerNameWithToggle(){
+    const holder = $('accHolder').value;
+    if (hashTag.dataset.on === 'true') {
+      if (holder.trim()) $('customerName').value = holder;
+    } else if ($('customerName').value === holder) {
+      $('customerName').value = '';
+    }
+  }
+
+  // ---- defaults / sequence ----
+  function loadDefaults(){
+    try {
+      const saved = JSON.parse(localStorage.getItem(STORE_KEY) || '{}');
+      if (saved.accNumber) $('accNumber').value = saved.accNumber;
+      if (saved.bankName) $('bankName').value = saved.bankName;
+      if (saved.accHolder) $('accHolder').value = saved.accHolder;
+    } catch(e) {}
+  }
+  function saveDefaults(){
+    try {
+      localStorage.setItem(STORE_KEY, JSON.stringify({
+        accNumber: $('accNumber').value.trim(),
+        bankName: $('bankName').value.trim(),
+        accHolder: $('accHolder').value.trim()
+      }));
+    } catch(e) {}
+  }
+  function padSeq(n){
+    const num = parseInt(n, 10);
+    if (isNaN(num)) return n;
+    return num < 10 ? '0' + num : String(num);
+  }
+  function initSeq(){
+    $('docDate').value = todayCode();
+    let last = 0;
+    try { last = parseInt(localStorage.getItem(SEQ_KEY) || '0', 10) || 0; } catch(e) {}
+    $('docSeq').value = padSeq(last + 1);
+  }
+
+  function line(label, value){
+    return `${label}: ${value && String(value).trim() ? value.trim() : ''}`;
+  }
+
+  function buildBatteryLine(v){
+    const bat = v('battery');
+    const cycle = v('cycleCount');
+    let text = 'สุขภาพแบต:';
+    if (bat) {
+      const isNumeric = /^\d+(\.\d+)?$/.test(bat);
+      text += ` ${bat}${isNumeric ? '%' : ''}`;
+    }
+    if (cycle) text += ` รอบชาร์จ ${cycle}`;
+    return text;
+  }
+
+  function buildDeal(){
+    const v = id => $(id).value.trim();
+    const parts = [];
+    if (hashTag.dataset.on === 'true') parts.push('#ปิดยอด');
+    parts.push(`#${v('docDate')}-${v('docSeq')}`);
+    parts.push(line('ชื่อลูกค้า', hashTag.dataset.on === 'true' ? v('customerName') : ''));
+    parts.push(line('ID ลูกค้า FB', v('fbId')));
+    parts.push(line('ID ลูกค้า LINE', v('lineId')));
+    parts.push(line('รายละเอียดสินค้า', v('productDetail')));
+    parts.push(line('อุปกรณ์', v('accessories')));
+    parts.push(line('ประกัน', v('warranty')));
+    parts.push('');
+    parts.push('สภาพสินค้า:');
+    parts.push(v('condition') || '');
+    parts.push(buildBatteryLine(v));
+    parts.push(line('ข้อมูลเพิ่มเติม', v('extraInfo')));
+    const buyMin = v('buyPriceMin');
+    const buyMax = v('buyPriceMax');
+    const buyValue = buyMin && buyMax ? `${buyMin}-${buyMax}` : (buyMin || buyMax || '');
+    parts.push(line('รับ', buyValue));
+    parts.push(line('ขาย', v('sellPrice')));
+    return parts.join('\n');
+  }
+
+  function buildPay(){
+    const v = id => $(id).value.trim();
+    const parts = [];
+    const accLine = [v('accNumber'), v('bankName')].filter(Boolean).join('  ');
+    if (accLine) parts.push(accLine);
+    if (v('accHolder')) parts.push(v('accHolder'));
+    if (v('transferAmount')) parts.push(`ยอด ${v('transferAmount')}`);
+    return parts.join('\n');
+  }
+
+  function buildPartial(){
+    const v = id => $(id).value.trim();
+    const parts = [];
+    parts.push(line('รายละเอียดสินค้า', v('productDetail')));
+    parts.push(line('อุปกรณ์', v('accessories')));
+    parts.push(line('ประกัน', v('warranty')));
+    parts.push('');
+    parts.push('สภาพสินค้า:');
+    parts.push(v('condition') || '');
+    parts.push(buildBatteryLine(v));
+    parts.push(line('ข้อมูลเพิ่มเติม', v('extraInfo')));
+    parts.push(line('รับ', v('buyPriceMin')));
+    return parts.join('\n');
+
+  }
+
+  let syncingFromDeal = false;
+  let syncingFromPay = false;
+
+  function render(){
+    if (!syncingFromDeal) $('outputDeal').textContent = buildDeal();
+    if (!syncingFromPay) $('outputPay').textContent = buildPay();
+  }
+
+  // ---- parse the deal box back into the form (two-way sync) ----
+  function syncMultiChipGroup(groupId, fieldValue){
+    const items = fieldValue.split(/[,\s]+/).map(s => s.trim()).filter(Boolean);
+    document.querySelectorAll('#'+groupId+' .chip').forEach(btn => {
+      btn.classList.toggle('active', items.includes(btn.dataset.value));
+    });
+  }
+  function syncSingleChipGroup(groupId, fieldValue){
+    document.querySelectorAll('#'+groupId+' .chip').forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.value === fieldValue.trim());
+    });
+  }
+  function syncChipsFromFields(){
+    syncMultiChipGroup('accessoryChips', $('accessories').value);
+    syncSingleChipGroup('warrantyChips', $('warranty').value);
+    syncMultiChipGroup('conditionChips', $('condition').value);
+    syncSingleChipGroup('bankChips', $('bankName').value);
+    syncSingleChipGroup('cycleChips', $('cycleCount').value);
+    syncSingleChipGroup('batteryChips', $('battery').value);
+  }
+
+  const dealLabelMap = {
+    'ชื่อลูกค้า': 'customerName',
+    'ID ลูกค้า FB': 'fbId',
+    'ID ลูกค้า LINE': 'lineId',
+    'รายละเอียดสินค้า': 'productDetail',
+    'อุปกรณ์': 'accessories',
+    'ประกัน': 'warranty',
+    'ข้อมูลเพิ่มเติม': 'extraInfo',
+    'ขาย': 'sellPrice'
+  };
+
+  function parseDealText(text){
+    const lines = text.split('\n');
+    let i = 0;
+    while (i < lines.length && lines[i].trim() === '') i++;
+
+    let sawHash = false;
+    if (lines[i] !== undefined && lines[i].trim() === '#ปิดยอด') {
+      sawHash = true;
+      i++;
+      while (i < lines.length && lines[i].trim() === '') i++;
+    }
+    hashTag.dataset.on = sawHash.toString();
+    hashTag.classList.toggle('on', sawHash);
+    hashTag.textContent = sawHash ? '#ปิดยอด: แสดง' : '#ปิดยอด: ซ่อน';
+
+    if (lines[i] !== undefined) {
+      const m = lines[i].trim().match(/^#([^\-\s]+)-(.+)$/);
+      if (m) {
+        $('docDate').value = m[1];
+        $('docSeq').value = m[2];
+        i++;
+      }
+    }
+
+    let conditionLines = null;
+
+    for (; i < lines.length; i++) {
+      const trimmed = lines[i].trim();
+      if (trimmed === '') continue;
+      const colonIdx = trimmed.indexOf(':');
+      const label = colonIdx >= 0 ? trimmed.slice(0, colonIdx).trim() : trimmed;
+      const value = colonIdx >= 0 ? trimmed.slice(colonIdx + 1).trim() : '';
+
+      if (label === 'รายละเอียดสินค้า') {
+        const productLines = [value];
+        let j = i + 1;
+        for (; j < lines.length; j++) {
+          const t = lines[j].trim();
+          if (t === '') break;
+          const ci = t.indexOf(':');
+          const lb = ci >= 0 ? t.slice(0, ci).trim() : t;
+          if (lb === 'สภาพสินค้า' || lb === 'สุขภาพแบต' || lb === 'รับ' || dealLabelMap.hasOwnProperty(lb)) break;
+          productLines.push(lines[j]);
+        }
+        $('productDetail').value = productLines.join('\n').trim();
+        autoGrowProductDetail();
+        i = j - 1;
+        continue;
+      }
+      if (label === 'สภาพสินค้า') {
+        conditionLines = [];
+        let j = i + 1;
+        for (; j < lines.length; j++) {
+          const t = lines[j].trim();
+          if (t === '') continue;
+          const ci = t.indexOf(':');
+          const lb = ci >= 0 ? t.slice(0, ci).trim() : t;
+          if (lb === 'สุขภาพแบต' || dealLabelMap.hasOwnProperty(lb) || lb === 'รับ') break;
+          conditionLines.push(lines[j]);
+        }
+        i = j - 1;
+        continue;
+      }
+      if (label === 'สุขภาพแบต') {
+        const cycleIdx = value.indexOf('รอบชาร์จ');
+        let batPart = value;
+        let cyclePart = '';
+        if (cycleIdx >= 0) {
+          batPart = value.slice(0, cycleIdx).trim();
+          cyclePart = value.slice(cycleIdx + 'รอบชาร์จ'.length).trim();
+        }
+        $('battery').value = batPart.replace('%', '').trim();
+        $('cycleCount').value = cyclePart;
+        continue;
+      }
+      if (label === 'รับ') {
+        const priceParts = value.split('-').map(s => s.trim()).filter(Boolean);
+        $('buyPriceMin').value = priceParts[0] || '';
+        $('buyPriceMax').value = priceParts[1] || '';
+        continue;
+      }
+      if (dealLabelMap.hasOwnProperty(label)) {
+        $(dealLabelMap[label]).value = value;
+        continue;
+      }
+    }
+
+    if (conditionLines !== null) {
+      $('condition').value = conditionLines.join('\n').trim();
+    }
+
+    syncChipsFromFields();
+  }
+
+  function parsePayText(text){
+    const lines = text.split('\n').map(l => l.trim()).filter(l => l !== '');
+    let amountLine = '';
+    let accLine = '';
+    const holderLines = [];
+
+    lines.forEach(l => {
+      if (/^ยอด(\s|$)/.test(l)) {
+        amountLine = l.replace(/^ยอด\s*/, '').trim();
+        return;
+      }
+      if (/\d{4,}/.test(l)) {
+        accLine = l;
+      } else {
+        holderLines.push(l);
+      }
+    });
+
+    if (accLine) {
+      const digitMatch = accLine.match(/\d[\d\s-]{3,}\d/);
+      if (digitMatch) {
+        const num = digitMatch[0].replace(/[\s-]+/g, '').trim();
+        const bank = accLine.replace(digitMatch[0], '').trim();
+        $('accNumber').value = num;
+        $('bankName').value = bank;
+      } else {
+        $('accNumber').value = accLine;
+        $('bankName').value = '';
+      }
+    } else {
+      $('accNumber').value = '';
+      $('bankName').value = '';
+    }
+    $('accHolder').value = holderLines.join(' ').trim();
+    $('transferAmount').value = amountLine;
+
+    syncSingleChipGroup('bankChips', $('bankName').value);
+  }
+
+  dealFields.forEach(id => $(id).addEventListener('input', render));
+  payFields.forEach(id => $(id).addEventListener('input', render));
+
+  // รายละเอียดสินค้า: ขยายจำนวนบรรทัดให้พอดีกับข้อความที่ใส่ (หลายบรรทัดได้)
+  function autoGrowProductDetail(){
+    const el = $('productDetail');
+    el.rows = Math.max(1, el.value.split('\n').length);
+  }
+  $('productDetail').addEventListener('input', autoGrowProductDetail);
+
+  // ชื่อบัญชี ↔ ชื่อลูกค้า เชื่อมข้อมูลกัน เฉพาะตอน #ปิดยอด แสดงอยู่
+  $('accHolder').addEventListener('input', () => {
+    if (hashTag.dataset.on === 'true') $('customerName').value = $('accHolder').value;
+    render();
+  });
+  $('customerName').addEventListener('input', () => {
+    if (hashTag.dataset.on !== 'true') return;
+    $('accHolder').value = $('customerName').value;
+    render();
+  });
+
+  $('outputDeal').addEventListener('input', () => {
+    syncingFromDeal = true;
+    parseDealText($('outputDeal').innerText);
+    syncingFromDeal = false;
+  });
+  $('outputPay').addEventListener('input', () => {
+    syncingFromPay = true;
+    parsePayText($('outputPay').innerText);
+    syncingFromPay = false;
+  });
+
+
+  async function copyText(text){
+    try { await navigator.clipboard.writeText(text); }
+    catch(e){
+      const ta = document.createElement('textarea');
+      ta.value = text;
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand('copy');
+      document.body.removeChild(ta);
+    }
+  }
+
+  function flashToast(id, ms){
+    const t = $(id);
+    t.classList.add('show');
+    setTimeout(() => t.classList.remove('show'), ms || 1500);
+  }
+
+  function selectAllInBox(box){
+    box.focus();
+    const range = document.createRange();
+    range.selectNodeContents(box);
+    const sel = window.getSelection();
+    sel.removeAllRanges();
+    sel.addRange(range);
+  }
+
+  $('copyDealBtn').addEventListener('click', async () => {
+    await copyText($('outputDeal').innerText);
+    try { localStorage.setItem(SEQ_KEY, $('docSeq').value); } catch(e) {}
+    flashToast('toastDeal');
+  });
+
+  $('copyDealPartialBtn').addEventListener('click', async () => {
+    await copyText(buildPartial());
+    flashToast('toastDealPartial');
+  });
+
+  $('copyPayBtn').addEventListener('click', async () => {
+    await copyText($('outputPay').innerText);
+    saveDefaults();
+    flashToast('toastPay');
+  });
+
+  function clearDealFields(){
+    ['customerName','fbId','lineId','productDetail','accessories','warranty',
+     'condition','battery','cycleCount','extraInfo','buyPriceMin','buyPriceMax','sellPrice'].forEach(id => $(id).value = '');
+    document.querySelectorAll('#accessoryChips .chip, #warrantyChips .chip, #conditionChips .chip, #cycleChips .chip, #batteryChips .chip')
+      .forEach(c => c.classList.remove('active'));
+    autoGrowProductDetail();
+    $('outputDeal').textContent = '';
+  }
+
+  function clearPayFields(){
+    ['accNumber','bankName','accHolder','transferAmount'].forEach(id => $(id).value = '');
+    document.querySelectorAll('#bankChips .chip').forEach(c => c.classList.remove('active'));
+    $('outputPay').textContent = '';
+  }
+
+  $('clearDealBtn').addEventListener('click', clearDealFields);
+  $('clearPayBtn').addEventListener('click', clearPayFields);
+
+  async function pasteIntoDeal(){
+    try {
+      if (!navigator.clipboard || !navigator.clipboard.readText) throw new Error('no clipboard api');
+      const text = await navigator.clipboard.readText();
+      if (!text) throw new Error('empty clipboard');
+      $('outputDeal').textContent = text;
+      syncingFromDeal = true;
+      parseDealText(text);
+      syncingFromDeal = false;
+    } catch(e) {
+      selectAllInBox($('outputDeal'));
+      flashToast('toastPasteDeal', 3000);
+    }
+  }
+
+  async function pasteIntoPay(){
+    try {
+      if (!navigator.clipboard || !navigator.clipboard.readText) throw new Error('no clipboard api');
+      const text = await navigator.clipboard.readText();
+      if (!text) throw new Error('empty clipboard');
+      $('outputPay').textContent = text;
+      syncingFromPay = true;
+      parsePayText(text);
+      syncingFromPay = false;
+    } catch(e) {
+      selectAllInBox($('outputPay'));
+      flashToast('toastPastePay', 3000);
+    }
+  }
+
+  $('pasteDealBtn').addEventListener('click', pasteIntoDeal);
+  $('pastePayBtn').addEventListener('click', pasteIntoPay);
+
+  // ---- saved records (local "spreadsheet" log) ----
+  const RECORDS_KEY = 'pidyord_records_v1';
+
+  function loadRecords(){
+    try { return JSON.parse(localStorage.getItem(RECORDS_KEY) || '[]'); } catch(e) { return []; }
+  }
+  function saveRecords(records){
+    try { localStorage.setItem(RECORDS_KEY, JSON.stringify(records)); } catch(e) {}
+  }
+
+
+  // ---- ซิงก์ใบที่บันทึกกับ Google Sheet (ผ่าน Google Apps Script) ----
+  // เก็บในเครื่องก่อนเสมอ แล้วส่งขึ้นชีตเบื้องหลัง; ถ้าออฟไลน์จะเก็บคิวไว้ส่งทีหลัง
+  const SHEET_CFG_KEY = 'pidyord_sheet_v1', SHEET_Q_KEY = 'pidyord_sheetQueue_v1', SHEET_MIG_KEY = 'pidyord_sheetMigrated_v1';
+  function sheetCfg(){
+    try { const c = JSON.parse(localStorage.getItem(SHEET_CFG_KEY) || 'null'); return c && c.url ? c : null; } catch(e) { return null; }
+  }
+  function loadQ(){ try { return JSON.parse(localStorage.getItem(SHEET_Q_KEY) || '[]') || []; } catch(e) { return []; } }
+  function saveQ(q){ try { localStorage.setItem(SHEET_Q_KEY, JSON.stringify(q)); } catch(e) {} }
+  const opId = o => o.op === 'delete' ? o.id : o.rec.id;
+  function queueOp(op){
+    if (!sheetCfg()) return;
+    saveQ(loadQ().filter(o => opId(o) !== opId(op)).concat([op]));   // ต่อ 1 ใบเก็บคำสั่งล่าสุดอันเดียว
+    updateSheetStatus('pending');
+    sheetSync();
+  }
+  async function sheetCall(cfg, payload){
+    const ctl = new AbortController();
+    const to = setTimeout(() => ctl.abort(), 25000);
+    try {
+      const r = await fetch(cfg.url, {
+        method: 'POST', redirect: 'follow', signal: ctl.signal,
+        headers: { 'Content-Type': 'text/plain;charset=utf-8' },   // text/plain = ไม่ต้อง preflight (Apps Script ไม่รองรับ OPTIONS)
+        body: JSON.stringify(Object.assign({ key: cfg.key }, payload))
+      });
+      let j; try { j = await r.json(); } catch(e) { throw new Error('ลิงก์ไม่ถูกต้อง หรือยังไม่ได้ตั้งให้ "ทุกคนเข้าถึงได้"'); }
+      if (!j.ok) throw new Error(j.error || 'ผิดพลาด');
+      return j;
+    } finally { clearTimeout(to); }
+  }
+  let sheetState = { text: '', error: '' }, syncing = false, syncAgain = false;
+  function updateSheetStatus(kind, extra){
+    const n = loadQ().length;
+    let t = '';
+    if (!sheetCfg()) t = 'ยังไม่ได้เชื่อม Google Sheet';
+    else if (kind === 'syncing') t = '⟳ กำลังซิงก์…';
+    else if (kind === 'error') t = '⚠ ซิงก์ไม่ได้' + (n ? ' (รอส่ง ' + n + ' รายการ)' : '') + (extra ? ' — ' + extra : '');
+    else if (n) t = '● รอส่ง ' + n + ' รายการ';
+    else t = '✓ ซิงก์กับ Google Sheet แล้ว';
+    sheetState.text = t;
+    const el = $('sheetStatus'); if (el) el.textContent = t;
+    const m = $('sheetMsg'); if (m && $('sheetOverlay').style.display !== 'none' && kind) m.textContent = t;
+  }
+  async function sheetSync(manual){
+    const cfg = sheetCfg();
+    if (!cfg) { updateSheetStatus(); return false; }
+    if (syncing) { syncAgain = true; return false; }
+    syncing = true; updateSheetStatus('syncing');
+    try {
+      // 1) ส่งคิวที่ค้างอยู่
+      const sent = loadQ();
+      if (sent.length) {
+        await sheetCall(cfg, { action: 'ops', ops: sent });
+        const sentSet = new Set(sent.map(o => JSON.stringify(o)));
+        saveQ(loadQ().filter(o => !sentSet.has(JSON.stringify(o))));
+      }
+      // 2) ดึงข้อมูลล่าสุดจากชีต
+      const listed = await sheetCall(cfg, { action: 'list' });
+      const remote = listed.records || [];
+      try { applySheetRates(listed.rates); } catch(e) {}   // เรทราคาจากแท็บ rates (ถ้ามี)
+      const remoteMap = new Map(remote.map(r => [r.id, r]));
+      const local = loadRecords();
+      // ครั้งแรกที่เชื่อม: ส่งใบที่มีอยู่ในเครื่องแต่ยังไม่มีในชีตขึ้นไปก่อน
+      if (!localStorage.getItem(SHEET_MIG_KEY)) {
+        const missing = local.filter(r => !remoteMap.has(r.id));
+        if (missing.length) {
+          await sheetCall(cfg, { action: 'ops', ops: missing.map(r => ({ op: 'upsert', rec: r })) });
+          missing.forEach(r => remoteMap.set(r.id, r));
+        }
+        try { localStorage.setItem(SHEET_MIG_KEY, '1'); } catch(e) {}
+      }
+      // 3) รวมผล: ชีตคือต้นฉบับ + ใบที่ยังรอส่งในเครื่อง
+      const pending = loadQ();
+      pending.forEach(o => { if (o.op === 'delete') remoteMap.delete(o.id); else remoteMap.set(o.rec.id, o.rec); });
+      const merged = Array.from(remoteMap.values()).sort((a, b) => a.id - b.id);
+      if (JSON.stringify(merged) !== JSON.stringify(local)) {
+        saveRecords(merged);
+        if ($('searchOverlay').style.display !== 'none') renderSearchResults($('searchInput').value);
+      }
+      updateSheetStatus(manual ? 'ok' : undefined);
+      return true;
+    } catch(e) {
+      updateSheetStatus('error', e && e.name === 'AbortError' ? 'หมดเวลา' : (navigator.onLine === false || (e && e.name === 'TypeError') ? 'เชื่อมต่อไม่ได้ (ออฟไลน์?)' : (e && e.message) || ''));
+      return false;
+    } finally {
+      syncing = false;
+      if (syncAgain) { syncAgain = false; setTimeout(() => sheetSync(), 300); }
+    }
+  }
+  window.addEventListener('online', () => sheetSync());
+  document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible') sheetSync(); });
+  setInterval(() => { if (document.visibilityState === 'visible' && (loadQ().length || sheetCfg())) sheetSync(); }, 60000);
+
+  function openSheetSettings(){
+    const c = sheetCfg();
+    $('sheetUrl').value = c ? c.url : '';
+    $('sheetKey').value = c ? c.key : '';
+    $('sheetMsg').textContent = sheetState.text;
+    $('sheetOverlay').style.display = 'flex';
+  }
+  $('sheetSettingsBtn').addEventListener('click', openSheetSettings);
+  $('closeSheetBtn').addEventListener('click', () => { $('sheetOverlay').style.display = 'none'; });
+  $('sheetOverlay').addEventListener('click', (e) => { if (e.target.id === 'sheetOverlay') $('sheetOverlay').style.display = 'none'; });
+  $('sheetSaveBtn').addEventListener('click', async () => {
+    const url = $('sheetUrl').value.trim(), key = $('sheetKey').value;
+    if (!/^https:\/\/script\.google\.com\//.test(url)) { $('sheetMsg').textContent = 'ลิงก์ต้องขึ้นต้นด้วย https://script.google.com/'; return; }
+    if (!key) { $('sheetMsg').textContent = 'ใส่รหัสลับด้วย'; return; }
+    $('sheetMsg').textContent = 'กำลังทดสอบ…';
+    try {
+      const j = await sheetCall({ url, key }, { action: 'ping' });
+      localStorage.setItem(SHEET_CFG_KEY, JSON.stringify({ url, key }));
+      $('sheetMsg').textContent = 'เชื่อมต่อสำเร็จ (ในชีตมี ' + j.count + ' ใบ) กำลังซิงก์…';
+      await sheetSync(true);
+    } catch(e) {
+      $('sheetMsg').textContent = 'เชื่อมต่อไม่สำเร็จ: ' + (e.name === 'AbortError' ? 'หมดเวลา' : e.message);
+    }
+  });
+  $('sheetSyncBtn').addEventListener('click', async () => {
+    if (!sheetCfg()) { $('sheetMsg').textContent = 'ยังไม่ได้ตั้งค่า'; return; }
+    await sheetSync(true);
+  });
+  $('sheetOffBtn').addEventListener('click', () => {
+    try { localStorage.removeItem(SHEET_CFG_KEY); localStorage.removeItem(SHEET_Q_KEY); localStorage.removeItem(SHEET_MIG_KEY); } catch(e) {}
+    $('sheetUrl').value = ''; $('sheetKey').value = '';
+    updateSheetStatus();
+    $('sheetMsg').textContent = 'ตัดการเชื่อมต่อแล้ว (ข้อมูลในเครื่องและในชีตยังอยู่)';
+  });
+  updateSheetStatus();
+  setTimeout(() => sheetSync(), 500);
+
+  $('submitBtn').addEventListener('click', () => {
+    const v = id => $(id).value.trim();
+    const rec = {
+      id: Date.now(),
+      updatedAt: Date.now(),
+      hasHash: hashTag.dataset.on === 'true',
+      savedAt: new Date().toLocaleString('th-TH'),
+      docNumber: `${v('docDate')}-${v('docSeq')}`,
+      customerName: v('customerName'), fbId: v('fbId'), lineId: v('lineId'),
+      productDetail: v('productDetail'), accessories: v('accessories'), warranty: v('warranty'),
+      condition: v('condition'), battery: v('battery'), cycleCount: v('cycleCount'),
+      extraInfo: v('extraInfo'), buyPriceMin: v('buyPriceMin'), buyPriceMax: v('buyPriceMax'),
+      sellPrice: v('sellPrice'), accNumber: v('accNumber'), bankName: v('bankName'),
+      accHolder: v('accHolder'), transferAmount: v('transferAmount'),
+      dealText: $('outputDeal').innerText, payText: $('outputPay').innerText
+    };
+    const records = loadRecords();
+    // เลขที่เอกสารเดียวกับใบ "ประเมิน" ที่มีอยู่: บันทึกทับใบประเมินเดิม ไม่สร้างใบใหม่
+    //  - ส่งเป็น "ประเมิน" อีกครั้ง → ใบประเมินถูกอัปเดต
+    //  - ส่งเป็น "#ปิดยอด" → ใบประเมินนั้นกลายเป็นใบ #ปิดยอด (ไม่เหลือใบประเมิน)
+    const dupIdx = records.findIndex(x => !recHasHash(x) && x.docNumber === rec.docNumber);
+    if (dupIdx >= 0) { rec.id = records[dupIdx].id; records[dupIdx] = rec; }
+    else records.push(rec);
+    saveRecords(records);
+    queueOp({ op: 'upsert', rec });
+    $('toastSubmit').textContent = dupIdx < 0 ? 'บันทึกแล้ว'
+      : (rec.hasHash ? 'เปลี่ยนใบประเมินเป็น #ปิดยอดแล้ว' : 'บันทึกทับใบประเมินเดิมแล้ว');
+    flashToast('toastSubmit', 2000);
+  });
+
+  function loadRecordIntoForm(r){
+    const dashIdx = r.docNumber.indexOf('-');
+    const on = recHasHash(r);
+    hashTag.dataset.on = String(on);
+    hashTag.classList.toggle('on', on);
+    hashTag.textContent = on ? '#ปิดยอด: แสดง' : '#ปิดยอด: ซ่อน';
+    $('docDate').value = dashIdx >= 0 ? r.docNumber.slice(0, dashIdx) : r.docNumber;
+    $('docSeq').value = dashIdx >= 0 ? r.docNumber.slice(dashIdx + 1) : '';
+    $('customerName').value = r.customerName || '';
+    $('fbId').value = r.fbId || '';
+    $('lineId').value = r.lineId || '';
+    $('productDetail').value = r.productDetail || '';
+    $('accessories').value = r.accessories || '';
+    $('warranty').value = r.warranty || '';
+    $('condition').value = r.condition || '';
+    $('battery').value = r.battery || '';
+    $('cycleCount').value = r.cycleCount || '';
+    $('extraInfo').value = r.extraInfo || '';
+    $('buyPriceMin').value = r.buyPriceMin || '';
+    $('buyPriceMax').value = r.buyPriceMax || '';
+    $('sellPrice').value = r.sellPrice || '';
+    $('accNumber').value = r.accNumber || '';
+    $('bankName').value = r.bankName || '';
+    $('accHolder').value = r.accHolder || '';
+    $('transferAmount').value = r.transferAmount || '';
+    syncChipsFromFields();
+    autoGrowProductDetail();
+    render();
+    closeSearch();
+  }
+
+  // ใบที่บันทึกก่อนมีฟิลด์ hasHash: ดูจากข้อความปิดยอดว่า#ปิดยอด หรือไม่
+  function recHasHash(r){ return typeof r.hasHash === 'boolean' ? r.hasHash : /#ปิดยอด/.test(r.dealText || ''); }
+  let hashFilter = 'all';   // all | yes | no
+  function filterRecords(records, query){
+    const q = (query || '').trim().toLowerCase();
+    return records.filter(r =>
+      (hashFilter === 'all' || (hashFilter === 'yes') === recHasHash(r)) &&
+      (!q || [r.customerName, r.lineId, r.fbId, r.docNumber, r.productDetail].join(' ').toLowerCase().includes(q))
+    );
+  }
+  function updateHashFilterUI(){
+    const all = loadRecords();
+    const yes = all.filter(recHasHash).length;
+    const counts = { all: all.length, yes: yes, no: all.length - yes };
+    const names = { all: 'ทั้งหมด', yes: '#ปิดยอด', no: 'ประเมิน' };
+    document.querySelectorAll('#hashFilter .chip').forEach(b => {
+      b.classList.toggle('active', b.dataset.f === hashFilter);
+      b.textContent = names[b.dataset.f] + ' (' + counts[b.dataset.f] + ')';
+    });
+  }
+  document.querySelectorAll('#hashFilter .chip').forEach(b => b.addEventListener('click', () => {
+    hashFilter = b.dataset.f;
+    renderSearchResults($('searchInput').value);
+  }));
+
+  function renderSearchResults(query){
+    updateHashFilterUI();
+    const records = loadRecords().slice().reverse();
+    const filtered = filterRecords(records, query);
+    const container = $('searchResults');
+    container.innerHTML = '';
+    if (!filtered.length) {
+      container.innerHTML = '<p class="hint">ไม่พบข้อมูล</p>';
+      return;
+    }
+    filtered.forEach(r => {
+      const displayName = r.customerName || r.fbId || r.lineId || '(ไม่ระบุชื่อ)';
+      const item = document.createElement('div');
+      item.className = 'search-item';
+      item.innerHTML = `
+        <div class="doc">#${r.docNumber} <span style="font-size:11px;opacity:.75;margin-left:6px;">${recHasHash(r) ? '#ปิดยอด' : 'ประเมิน'}</span></div>
+        <div class="name">${displayName}</div>
+        <div class="meta">${r.productDetail || ''}</div>
+        <div class="time">${r.savedAt}</div>
+      `;
+      const rowBtns = document.createElement('div');
+      rowBtns.className = 'row-btns';
+
+      const viewBtn = document.createElement('button');
+      viewBtn.type = 'button';
+      viewBtn.className = 'btn btn-ghost';
+      viewBtn.textContent = 'ดู';
+      viewBtn.addEventListener('click', () => {
+        $('viewTitle').textContent = '#' + r.docNumber + ' · ' + (recHasHash(r) ? '#ปิดยอด' : 'ประเมิน');
+        $('viewBody').textContent = [r.dealText, r.payText].filter(Boolean).join('\n\n----------\n\n');
+        $('viewOverlay').style.display = 'flex';
+      });
+
+      const loadBtn = document.createElement('button');
+      loadBtn.type = 'button';
+      loadBtn.className = 'btn btn-ghost';
+      loadBtn.textContent = 'โหลดกลับเข้าฟอร์ม';
+      loadBtn.addEventListener('click', () => loadRecordIntoForm(r));
+
+      const delBtn = document.createElement('button');
+      delBtn.type = 'button';
+      delBtn.className = 'btn btn-ghost';
+      delBtn.textContent = 'ลบ';
+      delBtn.addEventListener('click', () => {
+        saveRecords(loadRecords().filter(x => x.id !== r.id));
+        queueOp({ op: 'delete', id: r.id });
+        renderSearchResults($('searchInput').value);
+      });
+
+      rowBtns.appendChild(viewBtn);
+      rowBtns.appendChild(loadBtn);
+      rowBtns.appendChild(delBtn);
+      item.appendChild(rowBtns);
+      container.appendChild(item);
+    });
+  }
+
+  $('closeViewBtn').addEventListener('click', () => { $('viewOverlay').style.display = 'none'; });
+  $('viewOverlay').addEventListener('click', (e) => { if (e.target.id === 'viewOverlay') $('viewOverlay').style.display = 'none'; });
+
+  function openSearch(){
+    $('searchOverlay').style.display = 'flex';
+    $('searchInput').value = '';
+    renderSearchResults('');
+    sheetSync();
+    $('searchInput').focus();
+  }
+  function closeSearch(){
+    $('searchOverlay').style.display = 'none';
+  }
+
+  $('searchBtn').addEventListener('click', openSearch);
+  $('closeSearchBtn').addEventListener('click', closeSearch);
+  $('searchOverlay').addEventListener('click', (e) => { if (e.target.id === 'searchOverlay') closeSearch(); });
+  $('searchInput').addEventListener('input', () => renderSearchResults($('searchInput').value));
+
+  // ---- คำนวณราคารับ (เรทเริ่มต้นจาก Excel ชีต Ver4) ----
+  // ceiling = ขอบบนของช่วงราคาขาย (ขอบล่างคือ ceiling ของแถวก่อนหน้า, แถวแรกเริ่มที่ 0)
+  // minPct = % ราคารับต่ำสุด (เสนอครั้งแรก), finalPct = % ราคารับสูงสุด (เสนอครั้งสุดท้าย)
+  // ไม่มีชุดราคาเริ่มต้น — ต้องเพิ่มไฟล์ Excel (.xlsx) เองในหน้าต่างคำนวณ
+  const defaultBuyRateTable = {};
+
+  // ---- เรทที่อัปโหลดเอง (เก็บในเครื่อง) ----
+  const RATES_KEY = 'pidyord_rates_v1';          // (เก่า) เรทเดียว — ย้ายเข้าชุดเรทอัตโนมัติ
+  const RATESETS_KEY = 'pidyord_rateSets_v1';    // รายการชุดเรทที่เคยอัปโหลด
+  const RATESET_ACTIVE_KEY = 'pidyord_rateSetActive_v1';
+  let rateSets = [];                              // [{id, name, table}]
+  let activeRateSetId = 'default';
+  let buyRateTable = defaultBuyRateTable;
+  try {
+    rateSets = JSON.parse(localStorage.getItem(RATESETS_KEY) || '[]') || [];
+    if (!rateSets.length) {
+      const old = JSON.parse(localStorage.getItem(RATES_KEY) || 'null');
+      if (old && old.table && Object.keys(old.table).length) {
+        rateSets = [{ id: 'rs' + Date.now(), name: old.source || 'ไฟล์ที่อัปโหลดไว้', table: old.table }];
+        localStorage.setItem(RATESETS_KEY, JSON.stringify(rateSets));
+        localStorage.setItem(RATESET_ACTIVE_KEY, rateSets[0].id);
+      }
+    }
+    activeRateSetId = localStorage.getItem(RATESET_ACTIVE_KEY) || 'default';
+  } catch(e) {}
+  function saveRateSets(){
+    try {
+      localStorage.setItem(RATESETS_KEY, JSON.stringify(rateSets));
+      localStorage.setItem(RATESET_ACTIVE_KEY, activeRateSetId);
+    } catch(e) {}
+  }
+  function applyActiveRateSet(){
+    const set = rateSets.find(r => r.id === activeRateSetId);
+    if (set) buyRateTable = set.table;
+    else if (rateSets.length) { activeRateSetId = rateSets[0].id; buyRateTable = rateSets[0].table; }
+    else { activeRateSetId = 'default'; buyRateTable = defaultBuyRateTable; }
+  }
+  applyActiveRateSet();
+
+  function refreshCategorySelect(){
+    const sel = $('calcCategory');
+    const cur = sel.value;
+    sel.innerHTML = Object.keys(buyRateTable).map(k => `<option value="${k}">${k}</option>`).join('');
+    if (buyRateTable[cur]) sel.value = cur;
+
+    const rs = $('rateSetSelect');
+    const esc = t => String(t).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
+    const grouped = {}, loose = [];
+    rateSets.forEach(r => { if (r.file) (grouped[r.file] = grouped[r.file] || []).push(r); else loose.push(r); });
+    rs.innerHTML = (rateSets.length ? '' : '<option value="default">— ยังไม่มีชุดเรท —</option>') +
+      loose.map(r => `<option value="${r.id}">${esc(r.name)}</option>`).join('') +
+      Object.keys(grouped).map(f => `<optgroup label="${esc(f)}">` +
+        grouped[f].map(r => `<option value="${r.id}">แท็บ ${esc(r.sheet)}</option>`).join('') + '</optgroup>').join('');
+    rs.value = activeRateSetId;
+    const noDelete = activeRateSetId === 'default' || activeRateSetId === SHEET_RATES_ID;
+    $('deleteRateSetBtn').disabled = noDelete;
+    $('deleteRateSetBtn').style.opacity = noDelete ? '0.4' : '1';
+    $('ratesStatus').textContent = activeRateSetId === 'default'
+      ? 'ยังไม่มีชุดเรทราคา — เชื่อม Google Sheet หรือกด "เพิ่มไฟล์เรท Excel (.xlsx)"'
+      : activeRateSetId === SHEET_RATES_ID
+        ? 'ใช้เรทจาก Google Sheet — แก้ตัวเลขได้ที่แท็บ "rates" ในชีต ทุกเครื่องจะได้เรทใหม่ตอนซิงก์'
+        : 'ใช้ชุดเรทที่อัปโหลดไว้ (เลือกชุดอื่นได้ด้านบน)';
+  }
+
+  // ---- เรทจาก Google Sheet (แท็บ rates) — มากับผล action:list ทุกครั้งที่ซิงก์ ----
+  const SHEET_RATES_ID = 'sheet';
+  function applySheetRates(table){
+    if (!table || !Object.keys(table).length) return;
+    let set = rateSets.find(r => r.id === SHEET_RATES_ID);
+    if (set) {
+      if (JSON.stringify(set.table) === JSON.stringify(table)) return;   // ไม่เปลี่ยน
+      set.table = table;                                                   // เก็บ % ที่บันทึกเอง (overrides) ไว้
+    } else {
+      set = { id: SHEET_RATES_ID, name: 'Google Sheet (แท็บ rates)', table };
+      rateSets.unshift(set);
+    }
+    if (activeRateSetId === 'default') activeRateSetId = SHEET_RATES_ID;
+    saveRateSets();
+    applyActiveRateSet();
+    refreshCategorySelect();
+    if ($('calcBuyOverlay').style.display !== 'none') renderCalcBuyResult();
+  }
+
+  // อ่านชีต: แถวหัวตารางคือแถวที่คอลัมน์ B = "ราคาขาย" (คอลัมน์ A = ชื่อประเภทสินค้า)
+  // แถวถัดไป: A=ช่วงราคา, C=%กำไรสูงสุด, E=%ราคารับ, G=%ราคารับสูงสุด
+  function parseRatesSheet(wb, sheetName){
+    const rows = XLSX.utils.sheet_to_json(wb.Sheets[sheetName], { header: 1, defval: null });
+    const pct = v => { const n = parseFloat(v); if (isNaN(n)) return null; return n <= 1 ? n * 100 : n; };
+    const table = {};
+    let cat = null;
+    rows.forEach(r => {
+      const a = r[0] == null ? '' : String(r[0]).trim();
+      if (!a) { cat = null; return; }
+      if (String(r[1] == null ? '' : r[1]).trim() === 'ราคาขาย') { cat = a; table[cat] = []; return; }
+      if (!cat) return;
+      const nums = a.match(/\d+(?:\.\d+)?/g);
+      const ceiling = nums ? parseFloat(nums[nums.length - 1]) : parseFloat(r[1]);
+      let minPct = pct(r[4]);
+      if (minPct == null && pct(r[2]) != null) minPct = 100 - pct(r[2]);
+      const finalPct = pct(r[6]) != null ? pct(r[6]) : minPct;
+      if (!ceiling || minPct == null) return;
+      table[cat].push({ ceiling, minPct: Math.round(minPct * 10000) / 10000, finalPct: Math.round(finalPct * 10000) / 10000 });
+    });
+    Object.keys(table).forEach(k => {
+      table[k].sort((x, y) => x.ceiling - y.ceiling);
+      if (!table[k].length) delete table[k];
+    });
+    return table;
+  }
+
+  // ข้อความแจ้งผล (ใช้แทน alert/confirm ที่อาจถูกบล็อกในหน้าเว็บฝัง)
+  function setRatesMsg(msg){ $('ratesStatus').textContent = msg; }
+
+  let pendingWb = null, pendingFileName = '';
+
+  // เพิ่ม/อัปเดตชุดเรทจากแท็บเดียว (activate = ให้ใช้ชุดนี้ทันที)
+  function addRateSetFromSheet(wb, fileName, sheetName, activate){
+    const table = parseRatesSheet(wb, sheetName);
+    if (!Object.keys(table).length) return false;
+    const file = fileName.replace(/\.xlsx?$/i, '');
+    const name = file + ' (ชีต ' + sheetName + ')';
+    let set = rateSets.find(r => r.name === name);
+    if (set) { set.table = table; delete set.overrides; }
+    else { set = { id: 'rs' + Date.now() + Math.floor(Math.random() * 1000), name, file, sheet: sheetName, table }; rateSets.push(set); }
+    if (activate) activeRateSetId = set.id;
+    return true;
+  }
+  function finishRateSetChange(){
+    saveRateSets();
+    applyActiveRateSet();
+    refreshCategorySelect();
+    renderCalcBuyResult();
+  }
+
+  function closeSheetPick(){
+    $('sheetPickPanel').style.display = 'none';
+    pendingWb = null;
+  }
+
+  $('uploadRatesBtn').addEventListener('click', () => $('ratesFileInput').click());
+  $('ratesFileInput').addEventListener('change', async (e) => {
+    const file = e.target.files[0];
+    e.target.value = '';
+    if (!file) return;
+    if (typeof XLSX === 'undefined') { setRatesMsg('ไม่สามารถโหลดไลบรารีอ่านไฟล์ Excel ได้ ลองใหม่อีกครั้ง'); return; }
+    try {
+      const wb = XLSX.read(await file.arrayBuffer(), { type: 'array', bookFiles: true });
+      const names = wb.SheetNames;
+      if (names.length === 1) {
+        closeSheetPick();
+        if (addRateSetFromSheet(wb, file.name, names[0], true)) finishRateSetChange();
+        else setRatesMsg('อ่านเรทจากไฟล์นี้ไม่ได้ — หัวตารางต้องมีคำว่า "ราคาขาย" ในคอลัมน์ B และชื่อประเภทสินค้าในคอลัมน์ A');
+        return;
+      }
+      // หลายแท็บ: ให้เลือกเอง (เลือกแท็บที่เปิดค้างไว้ตอนบันทึกไฟล์ให้ก่อน)
+      let def = names[names.length - 1];
+      try {
+        let idx = wb.Workbook && wb.Workbook.Views && wb.Workbook.Views[0] && wb.Workbook.Views[0].activeTab;
+        if (idx == null && wb.files) {   // SheetJS ไม่ส่ง activeTab มาให้ → อ่านจาก workbook.xml เอง
+          const f = wb.files['xl/workbook.xml'] || wb.files['/xl/workbook.xml'];
+          const xml = f && f.content ? (typeof f.content === 'string' ? f.content : new TextDecoder('utf-8').decode(f.content)) : '';
+          const m = xml.match(/activeTab="(\d+)"/);
+          idx = m ? parseInt(m[1], 10) : 0;   // ไม่มี activeTab = แท็บแรก
+        }
+        if (idx != null && names[idx]) def = names[idx];
+      } catch(err) {}
+      pendingWb = wb; pendingFileName = file.name;
+      $('sheetPickLabel').textContent = 'ไฟล์นี้มี ' + names.length + ' แท็บ — เลือกแท็บที่ต้องการใช้';
+      $('sheetPickSelect').innerHTML = names.map(n => {
+        const ok = Object.keys(parseRatesSheet(wb, n)).length > 0;
+        return `<option value="${n.replace(/"/g, '&quot;')}"${ok ? '' : ' disabled'}>${n.replace(/</g, '&lt;')}${ok ? '' : ' (อ่านเรทไม่ได้)'}</option>`;
+      }).join('');
+      const defOpt = [...$('sheetPickSelect').options].find(o => o.value === def && !o.disabled);
+      const firstOk = [...$('sheetPickSelect').options].find(o => !o.disabled);
+      if (!firstOk) { closeSheetPick(); setRatesMsg('อ่านเรทจากไฟล์นี้ไม่ได้ — ไม่มีแท็บไหนที่รูปแบบตารางตรงกับไฟล์เดิม'); return; }
+      $('sheetPickSelect').value = (defOpt || firstOk).value;
+      $('sheetPickPanel').style.display = 'block';
+      setRatesMsg('');
+    } catch(err) {
+      setRatesMsg('เปิดไฟล์ไม่สำเร็จ: ' + err.message);
+    }
+  });
+  $('sheetPickOkBtn').addEventListener('click', () => {
+    if (!pendingWb) return;
+    const chosen = $('sheetPickSelect').value;
+    let count = 0;
+    pendingWb.SheetNames.forEach(n => { if (addRateSetFromSheet(pendingWb, pendingFileName, n, n === chosen)) count++; });
+    closeSheetPick();
+    finishRateSetChange();
+    setRatesMsg('เพิ่มเรทจากไฟล์นี้ ' + count + ' แท็บ — สลับแท็บได้ที่ช่อง "ชุดเรทราคา" โดยไม่ต้องอัปโหลดใหม่');
+  });
+  $('sheetPickCancelBtn').addEventListener('click', () => { closeSheetPick(); refreshCategorySelect(); });
+
+  $('rateSetSelect').addEventListener('change', () => {
+    disarmDelete();
+    activeRateSetId = $('rateSetSelect').value;
+    saveRateSets();
+    applyActiveRateSet();
+    refreshCategorySelect();
+    renderCalcBuyResult();
+  });
+
+  // ลบชุดเรท: กดครั้งแรกขอยืนยัน กดอีกครั้งภายใน 4 วินาทีจึงลบจริง (ไม่ใช้ confirm() ซึ่งอาจถูกบล็อก)
+  let deleteArmedTimer = null;
+  function disarmDelete(){
+    clearTimeout(deleteArmedTimer); deleteArmedTimer = null;
+    $('deleteRateSetBtn').textContent = 'ลบชุดนี้';
+  }
+  $('deleteRateSetBtn').addEventListener('click', () => {
+    const set = rateSets.find(r => r.id === activeRateSetId);
+    if (!set) return;
+    if (!deleteArmedTimer) {
+      $('deleteRateSetBtn').textContent = 'กดอีกครั้งเพื่อลบ';
+      deleteArmedTimer = setTimeout(disarmDelete, 4000);
+      return;
+    }
+    disarmDelete();
+    rateSets = rateSets.filter(r => r.id !== set.id);
+    activeRateSetId = rateSets.length ? rateSets[0].id : 'default';
+    saveRateSets();
+    applyActiveRateSet();
+    refreshCategorySelect();
+    renderCalcBuyResult();
+    setRatesMsg('ลบชุดเรท "' + set.name + '" แล้ว');
+  });
+  refreshCategorySelect();
+
+  function findBuyRateTier(category, price){
+    const tiers = buyRateTable[category];
+    for (const t of tiers) if (price <= t.ceiling) return t;
+    return tiers[tiers.length - 1];
+  }
+  function roundToHundred(n){ return Math.round(n / 100) * 100; }
+  const fmtPct = n => String(Math.round(n * 10) / 10);
+
+  // ค่า % ที่ใช้อยู่ (แก้เองได้) — รีเซ็ตเป็นค่าแนะนำเมื่อเปลี่ยนประเภท/ราคาขาย
+  const calcPct = { min: 0, final: 0 };
+
+  function calcBuyUpdateNumbers(){
+    const price = parseFloat($('calcSellPrice').value) || 0;
+    [['min', 'Min'], ['final', 'Final']].forEach(([key, id]) => {
+      const buy = roundToHundred(price * calcPct[key] / 100);
+      const profit = price - buy;
+      const profitPct = price ? profit / price * 100 : 0;
+      $('calcBuy' + id).textContent = buy.toLocaleString() + ' บาท';
+      $('calcProfit' + id).textContent = 'กำไร ' + profit.toLocaleString() + ' บาท (' + fmtPct(profitPct) + '%)';
+      $('calcBuy' + id).dataset.value = buy;
+    });
+  }
+
+  function renderCalcBuyResult(){
+    const category = $('calcCategory').value;
+    const price = parseFloat($('calcSellPrice').value);
+    const out = $('calcBuyResult');
+    if (!category || !buyRateTable[category]) {
+      out.innerHTML = '<p class="hint">ยังไม่มีชุดเรทราคา — กด "เพิ่มไฟล์เรท Excel (.xlsx)" ด้านล่างเพื่อใส่ราคาของคุณเอง</p>';
+      return;
+    }
+    if (!price || price <= 0) {
+      out.innerHTML = '<p class="hint">ใส่ราคาขายก่อน</p>';
+      return;
+    }
+    const tier = findBuyRateTier(category, price);
+    const aset = rateSets.find(r => r.id === activeRateSetId);
+    const getOv = () => ((aset && aset.overrides && aset.overrides[category]) || {})[tier.ceiling] || {};
+    const ov = getOv();
+    const base = { min: tier.minPct, final: tier.finalPct };
+    const eff = { min: ov.min != null ? ov.min : base.min, final: ov.final != null ? ov.final : base.final };
+    calcPct.min = eff.min;
+    calcPct.final = eff.final;
+
+    const card = (id, title, key, target) => `
+      <div style="border:1px solid var(--line); border-radius:8px; padding:10px 12px; margin-bottom:10px;">
+        <div class="hint" style="margin-top:0;">${title}</div>
+        <div id="calcBuy${id}" style="font-size:18px; font-weight:700; color:var(--accent);"></div>
+        <div id="calcProfit${id}" class="hint"></div>
+        <div class="row2" style="margin-top:8px;">
+          <div class="field" style="margin:0;"><label>% ราคารับ</label><input id="calcRecvPct${id}" inputmode="decimal" value="${fmtPct(eff[key])}"></div>
+          <div class="field" style="margin:0;"><label>% กำไร</label><input id="calcProfitPct${id}" inputmode="decimal" value="${fmtPct(100 - eff[key])}"></div>
+        </div>
+        <div class="hint">ตามไฟล์: รับ ${fmtPct(base[key])}% / กำไร ${fmtPct(100 - base[key])}%${ov[key] != null ? ' — <b>ใช้ค่าที่คุณบันทึกไว้</b>' : ''}</div>
+        <div style="display:flex; gap:8px; margin-top:8px;">
+          <button type="button" class="btn btn-ghost" id="saveBuyPct${id}Btn" style="flex:1;">บันทึก %</button>
+          <button type="button" class="btn btn-ghost" id="resetBuyPct${id}Btn" style="flex:1;">กลับค่าตามไฟล์</button>
+        </div>
+        <div class="hint" id="calcPctMsg${id}" style="min-height:16px;"></div>
+        <button type="button" class="btn btn-ghost" id="useBuy${id}Btn" style="margin-top:4px; width:100%;">ใช้ราคานี้ → ${target}</button>
+      </div>`;
+    out.innerHTML =
+      card('Min', 'เสนอครั้งแรก (กำไรเยอะสุด)', 'min', 'รับ (ราคาแรก)') +
+      card('Final', 'เสนอครั้งสุดท้าย (ปิดดีล)', 'final', 'รับ (ราคาสอง)');
+
+    [['min', 'Min', 'buyPriceMin'], ['final', 'Final', 'buyPriceMax']].forEach(([key, id, field]) => {
+      const recv = $('calcRecvPct' + id), prof = $('calcProfitPct' + id);
+      const msg = t => { $('calcPctMsg' + id).textContent = t; };
+      recv.addEventListener('input', () => {
+        const v = parseFloat(recv.value);
+        if (isNaN(v)) return;
+        calcPct[key] = v;
+        prof.value = fmtPct(100 - v);
+        calcBuyUpdateNumbers();
+      });
+      prof.addEventListener('input', () => {
+        const v = parseFloat(prof.value);
+        if (isNaN(v)) return;
+        calcPct[key] = 100 - v;
+        recv.value = fmtPct(100 - v);
+        calcBuyUpdateNumbers();
+      });
+      $('saveBuyPct' + id + 'Btn').addEventListener('click', () => {
+        if (!aset) { msg('ต้องมีชุดเรทก่อนจึงจะบันทึกได้'); return; }
+        const v = Math.round(calcPct[key] * 10000) / 10000;
+        aset.overrides = aset.overrides || {};
+        const byCat = aset.overrides[category] = aset.overrides[category] || {};
+        const t = byCat[tier.ceiling] = byCat[tier.ceiling] || {};
+        if (Math.abs(v - base[key]) < 0.0001) delete t[key]; else t[key] = v;
+        if (!Object.keys(t).length) delete byCat[tier.ceiling];
+        saveRateSets();
+        renderCalcBuyResult();
+        $('calcPctMsg' + id).textContent = 'บันทึก ' + fmtPct(v) + '% แล้ว (ใช้กับช่วงราคาขายนี้)';
+      });
+      $('resetBuyPct' + id + 'Btn').addEventListener('click', () => {
+        if (aset && aset.overrides && aset.overrides[category] && aset.overrides[category][tier.ceiling]) {
+          delete aset.overrides[category][tier.ceiling][key];
+          if (!Object.keys(aset.overrides[category][tier.ceiling]).length) delete aset.overrides[category][tier.ceiling];
+          saveRateSets();
+        }
+        renderCalcBuyResult();
+        $('calcPctMsg' + id).textContent = 'กลับเป็นค่าตามไฟล์แล้ว';
+      });
+      $('useBuy' + id + 'Btn').addEventListener('click', () => {
+        $(field).value = $('calcBuy' + id).dataset.value;
+        render();
+        closeCalcBuy();
+      });
+    });
+    calcBuyUpdateNumbers();
+  }
+
+  function openCalcBuy(){
+    $('calcBuyOverlay').style.display = 'flex';
+    $('calcSellPrice').value = $('sellPrice').value || '';
+    renderCalcBuyResult();
+  }
+  function closeCalcBuy(){
+    $('calcBuyOverlay').style.display = 'none';
+  }
+
+  $('calcBuyBtn').addEventListener('click', openCalcBuy);
+  $('closeCalcBuyBtn').addEventListener('click', closeCalcBuy);
+  $('calcBuyOverlay').addEventListener('click', (e) => { if (e.target.id === 'calcBuyOverlay') closeCalcBuy(); });
+  $('calcCategory').addEventListener('change', renderCalcBuyResult);
+  $('calcSellPrice').addEventListener('input', renderCalcBuyResult);
+
+  $('downloadExcelBtn').addEventListener('click', () => {
+    if (typeof XLSX === 'undefined') {
+      alert('ไม่สามารถโหลดไลบรารีสำหรับสร้างไฟล์ Excel ได้ ลองใหม่อีกครั้ง');
+      return;
+    }
+    const list = filterRecords(loadRecords(), $('searchInput').value);
+    if (!list.length) { alert('ยังไม่มีข้อมูลที่บันทึกไว้'); return; }
+    const toRows = arr => arr.map(r => ({
+      'ประเภท': recHasHash(r) ? '#ปิดยอด' : 'ประเมิน',
+      'เลขที่เอกสาร': r.docNumber, 'วันที่บันทึก': r.savedAt,
+      'ชื่อลูกค้า': r.customerName, 'ID FB': r.fbId, 'ID LINE': r.lineId,
+      'รายละเอียดสินค้า': r.productDetail, 'อุปกรณ์': r.accessories, 'ประกัน': r.warranty,
+      'สภาพสินค้า': r.condition, 'สุขภาพแบต': r.battery, 'รอบชาร์จ': r.cycleCount,
+      'ข้อมูลเพิ่มเติม': r.extraInfo, 'รับ (ต่ำสุด)': r.buyPriceMin, 'รับ (สูงสุด)': r.buyPriceMax,
+      'ขาย': r.sellPrice, 'เลขบัญชี': r.accNumber, 'ธนาคาร': r.bankName,
+      'ชื่อบัญชี': r.accHolder, 'ยอดโอน': r.transferAmount
+    }));
+    const wb = XLSX.utils.book_new();
+    // สร้างชีต: แถวหัวตาราง (แถวที่ 1 มีช่อง "ประเภท") เติมสีเหลืองอ่อนทั้งแถว + ใส่ตัวกรอง (Filter) ให้กรองประเภทได้
+    const mkSheet = rows => {
+      const ws = XLSX.utils.json_to_sheet(rows);
+      const ref = XLSX.utils.decode_range(ws['!ref']);
+      for (let c = ref.s.c; c <= ref.e.c; c++) {
+        const cell = ws[XLSX.utils.encode_cell({ r: 0, c })];
+        if (cell) cell.s = { fill: { patternType: 'solid', fgColor: { rgb: 'FFFF99' } }, font: { bold: true }, alignment: { vertical: 'center' } };
+      }
+      ws['!autofilter'] = { ref: ws['!ref'] };
+      ws['!cols'] = Object.keys(rows[0]).map(k => ({ wch: Math.max(12, Math.min(40, k.length + 6)) }));
+      return ws;
+    };
+    const yesList = list.filter(recHasHash), noList = list.filter(r => !recHasHash(r));
+    if (hashFilter === 'all') {      // แยกชีตตามประเภท
+      XLSX.utils.book_append_sheet(wb, mkSheet(toRows(list)), 'ทั้งหมด');
+      if (yesList.length) XLSX.utils.book_append_sheet(wb, mkSheet(toRows(yesList)), '#ปิดยอด');
+      if (noList.length) XLSX.utils.book_append_sheet(wb, mkSheet(toRows(noList)), 'ประเมิน');
+    } else {
+      XLSX.utils.book_append_sheet(wb, mkSheet(toRows(list)), hashFilter === 'yes' ? '#ปิดยอด' : 'ประเมิน');
+    }
+    XLSX.writeFile(wb, `ปิดยอด-${todayCode()}.xlsx`);
+  });
+
+  $('nextBtn').addEventListener('click', () => {
+    saveDefaults();
+    const nextSeq = (parseInt($('docSeq').value,10) || 0) + 1;
+    try { localStorage.setItem(SEQ_KEY, String(nextSeq)); } catch(e) {}
+    clearDealFields();
+    clearPayFields();
+    $('docDate').value = todayCode();
+    $('docSeq').value = padSeq(nextSeq);
+    render();
+  });
+
+  loadDefaults();
+  syncCustomerNameWithToggle();
+  initSeq();
+  render();
+})();
+</script>
+</body>
+</html>
